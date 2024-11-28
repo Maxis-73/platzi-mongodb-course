@@ -10,4 +10,4 @@ db.companies.find({
             "person.first_name": "Mark"
         }
     }
-}, {name: 1, relationships:1}).count()
+}, { name: 1, relationships: 1 }).count()
