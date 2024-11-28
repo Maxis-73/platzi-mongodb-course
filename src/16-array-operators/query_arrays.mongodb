@@ -1,0 +1,22 @@
+use("platzi_store")
+
+// $in - Values & Arrays (Similar a un operador OR)
+//db.inventory.find({ qty: { $in: [20, 25] } })
+//db.inventory.find({ tags: { $in: ["electronics", "book"] } })
+
+// $nin
+//db.inventory.find({ qty: { $nin: [20, 25] } })
+//db.inventory.find({ tags: { $nin: ["electronics", "book"] } })
+
+// Arrays
+//db.inventory.find({tags: "book"})
+//db.inventory.find({tags: ["school", "book"]})
+
+// $all (Similar a un AND)
+//db.inventory.find({tags: {$all: ["school", "book"]}})
+
+// $size
+//db.inventory.find({tags: {$size: 2}})
+
+// elemMatch
+db.survey.find({ results: { $elemMatch: { product: "xyz", score: { $gte: 7 } } } })
